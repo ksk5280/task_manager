@@ -1,0 +1,17 @@
+<div class="container text-center">
+  <form action="/tasks/<%= @task.id %>" method="post">
+    <h1>Edit Task</h1>
+    <input type="hidden" name="_method" value="put">
+    <div class="form-group">
+      <label for="taskTitle">Task Title</label>
+      <input type='text' class="form-control" name="task[title]" value="<%= @task.title %>"/><br/>
+    </div>
+    <div class="form-group">
+      <label for="taskDescription">Task Description</label>
+      <textarea name='task[description]' class="form-control"><%= @task.description %></textarea><br/>
+    </div>
+    <div class="form-group">
+      <input type='submit' class="btn btn-primary"/>
+    </div>
+  </form>
+</div>

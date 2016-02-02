@@ -1,9 +1,12 @@
 ---
 tasks:
-- id: 1
-  title: do homework
-  description: style Taskmanager
 - id: 2
-  title: portfolio
-  description: write mission statement
-total: 2
+  title: " Work on portfolio statement"
+  description: Write mission statement
+- id: 3
+  title: Study
+  description: Sinatra
+- id: 5
+  title: Shovel sidewalk
+  description: Move snow off of sidewalk and driveway to street
+total: 5

@@ -1,5 +1,5 @@
 require 'bundler'
-Bundler.require
+Bundler.require # requires all gems in Gemfile
 
 $LOAD_PATH.unshift(File.expand_path("app", __dir__))
 
