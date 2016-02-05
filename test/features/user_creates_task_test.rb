@@ -5,12 +5,12 @@ class UserCreatesTaskTest < Minitest::Test
   include TestHelpers
 
   def test_with_valid_attributes
-
     # As a user
     # When I visit the home page
     visit '/'
     # And I click on "New Task"
     click_link("New Task")
+    assert_equal '/tasks/new', current_path
     # And I fill in the title
     fill_in("task[title]", with: "This is a new task")
     # And I fill in the description
