@@ -1,6 +1,6 @@
 require_relative '../test_helper'
 
-class UserEditsTaskTest < Minitest::Test
+class UserDeletesTaskTest < Minitest::Test
   include Capybara::DSL
   include TestHelpers
 
@@ -22,11 +22,12 @@ class UserEditsTaskTest < Minitest::Test
     click_link("Task Index")
     assert '/tasks', current_path
     # And I click on the delete button
-    first(:link, "Delete").click
+    first(:button, "Delete").click
     # Then I should no longer see the task in the task index
     assert '/tasks', current_path
     within("#tasks") do
       refute page.has_content?("some title")
+      assert page.has_content?("another title")
     end
   end
 end
